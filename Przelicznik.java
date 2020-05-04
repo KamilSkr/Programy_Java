@@ -1,7 +1,5 @@
-package zadania;
-
 import java.util.Scanner;
-public class Zadania {
+public class Przelicznik {
     public static void main(String[] args) {
         double metry, jardy, cale, stopy, mile;
         Scanner sc = new Scanner(System.in);

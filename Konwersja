@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Zadania {
+    public static void main(String[] args) {
+        double tab[] = new double[100];
+        double metry,jardy, cale, stopy, mile;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Podaj liczbe");
+            metry=sc.nextInt();
+        System.out.println("Metry:\t " + " Cale:\t "+ "Jardy:\t "+"Stopy: "+"Mile: ");
+        for(int i =0 ; i<=100;i=i+5){  
+        tab[i]= metry;
+            jardy = tab[i]*1.09361;
+            jardy *=100;
+            jardy=Math.round(jardy);
+            jardy /= 100;
+        cale = tab[i]*39.3700;
+            cale *=100;
+            cale=Math.round(cale);
+            cale /= 100;
+        stopy = tab[i]*3.2808;
+            stopy *=100;
+            stopy=Math.round(stopy);
+            stopy /= 100;
+        mile = tab[i]*0.0006;
+            mile *=100;
+            mile=Math.round(mile);
+            mile /= 100;
+        System.out.println( (int)tab[i] + "\t"+cale+ "\t"+jardy+"\t"+stopy+"\t "+mile);
+        metry+=5;
+            }
+        }
+}

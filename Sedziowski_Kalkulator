@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class KalSendziowski {
+    static int ocena,x,najwieksza, najmniejsza;
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Kalkulator sedziowski ");
+        System.out.println("Podaj oceny sedziow: ");
+        System.out.print("Sedzia: 1"+"\t");
+        x = sc.nextInt();
+        najmniejsza = x;
+        for(int i = 1; i <10 ; i++)
+        {
+            System.out.print("Sedzia: "+(i+1)+"\t");
+            x = sc.nextInt();
+            ocena += x;
+            if(x>najwieksza)
+            {
+                najwieksza = x;
+            }
+            else if(x<najmniejsza)
+            {
+                najmniejsza = x;
+            }
+        }
+       System.out.println("Suma = " + ocena);
+       System.out.println("Srednia Ocen: "+(double)(((ocena-(najwieksza-najmniejsza))/10)));
+       System.out.println("Nalepsza ocena wyniosla: " + najwieksza);
+       System.out.println("Najgorsza ocena wyniosla: " + najmniejsza);
+    }  
+}

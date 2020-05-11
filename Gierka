@@ -1,0 +1,32 @@
+/*
+///Gierka za mało za dużo
+*
+import java.util.Random;
+import java.util.Scanner;
+public class Gierka {
+    static int x,y;
+    static Scanner sc = new Scanner(System.in);
+    static Random rd = new Random();
+    
+    public static void main(String[] args) {
+        System.out.println("Gierka za malo za duzo ");
+        y = rd.nextInt(101);
+        while(x != y){
+        System.out.println("\nSprobuj trafic w wylosowana liczbe ");
+        System.out.print("Podaj liczbe: ");
+        x = sc.nextInt();
+            if(x>y)
+            {
+                System.out.println("Za duzo");
+            }
+            else if(x<y)
+            {
+                System.out.println("Za malo");
+            }
+            else if(x==y)
+            {
+                System.out.println("Brawo trafiles\n");
+            }
+        }
+    }  
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Przychod {
+    static int przychod,x,najwieksza, najmniejsza;
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Roczne przychody ");
+        System.out.println("Podaj twoj dochod w poszczegolnych miesiacach: ");
+        for(int i = 0; i <12 ; i++)
+        {
+            System.out.print("Miesiac: "+(i+1)+"\t");
+            x = sc.nextInt();
+            przychod += x;
+            if(x>najwieksza)
+            {
+                najwieksza = x;
+            }
+            else if(x<najmniejsza)
+            {
+                najmniejsza = x;
+            }
+        }
+       System.out.println("Suma = " + przychod);
+       System.out.println("Srednia zarobkow: "+(przychod/12));
+       System.out.println("Najwiekszy przychod wyniosl: " + najwieksza);
+       System.out.println("Najnizszy przychod wyniosl: " + najmniejsza);
+    }  
+}

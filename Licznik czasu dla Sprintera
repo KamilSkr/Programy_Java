@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Sprinter {
+    static double czas,x,najlepszy, najgorszy;
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Kalkulator dla sprintera ");
+        System.out.println("Podaj czas : ");
+        System.out.print("Czas 1: "+"\t");
+        x = sc.nextDouble();
+        najgorszy = x;
+        for(int i = 1; i <5 ; i++)
+        {
+            System.out.print("Czas: "+(i+1)+"\t");
+            x = sc.nextDouble();
+            czas += x;
+            if(x>najlepszy)
+            {
+                najlepszy = x;
+            }
+            else if(x<najgorszy)
+            {
+                najgorszy = x;
+            }
+        }
+       System.out.println("Suma = " + czas);
+       System.out.println("Sredni Czas: "+czas/5);
+       System.out.println("Najgorszy wynik wyniosl: " + najlepszy);
+       System.out.println("Najlepszy wynik wyniosl: " + najgorszy);
+    }  
+}
